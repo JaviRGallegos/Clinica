@@ -1,0 +1,47 @@
+MVC
+
+modelos->gestionar informacion de usuarios...doctores...(clase que tiene al menos los campos del formulario (GET/SET y metodos que accedan a la bd)). 
+vista->escribir datos del paciete(formulario/datos que medimos al modelo)
+
+Un modelo nuca se comunica directamente con una vista. Y viceversa.
+Se comunican mediante controlador. Este le dice al modelo( dame los datos del paciente). 
+El modelo se los da y el controlador se los manda a la vista
+
+
+    /*PRUEBA SACAR NOMBRE DOCTOR E IMPRIMIRLO X PANTALLA*/
+
+    //los espacios de nombres nos permiten tener varias clases con el mismo nombre, sin que choquen.
+    // use Models\Doctor;//lamada a la clase Doctor.
+
+    // $sudoctor = new Doctor('4','Ricardo','Solano Pérez','958121212','cardiología');
+    // $nombreDoctor = $sudoctor->getNombre();
+    // echo "Esa paciente del doctor $nombreDoctor".'<br>';
+
+
+    /*PRUEBA INSERTAR NUEVO PACIENTE + SUS DATOS , SACAR NOMBRE CON GET E IMPRIMIRLO X PANTALLA*/
+    // use Models\Paciente;//lamada a la clase Doctor.
+
+    // $paciente = new Paciente();
+    // $paciente->setId('2');
+    // $paciente->setNombre('Edén');
+    // $paciente->setApellidos('Ayuso Comino');
+    // $paciente->setCorreo('eden@gmail.com');
+    // $paciente->setPasword('123456789');
+
+    // $nombrePaciente = $paciente->getNombre();
+    // echo "Nuevo paciente $nombrePaciente";
+
+
+/*
+    require_once 'config/config.php';//en este fichero tenemos las constantes de la conexion a la base de datos
+    use Lib\BaseDatos;//traemos la clase BaseDatos...
+    $db = new BaseDatos();//para usarla.
+    
+    $db->consultar("SELECT * FROM pacientes");//llamamos al metodo consultar.
+
+    while($fila = $db->extraer_registro()){//llamamos al metodo extraer_registro e iteramos.
+        foreach($fila as $campo=>$valor){
+            echo "$campo: $valor <br><br>";
+        }
+        echo '<hr>';
+    }*/
